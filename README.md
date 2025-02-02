@@ -1,5 +1,8 @@
 # Covid Landing Page
 
+
+<a href="https://elamaravati.github.io/covid-landing-page/" target="_blank" rel="noopener noreferrer">Live Preview</a>
+
 This project demonstrates the process of slicing a design into a functional landing page using HTML, CSS, and JavaScript. The goal is to turn a visual design into a fully responsive webpage with proper styling and interactivity.
 
 - **Created on:** June 2022
