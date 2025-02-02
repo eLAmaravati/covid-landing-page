@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 	<head>
-		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Favicon -->
-		<link rel="icon" href="img/logo-2.svg" type="image/gif" sizes="16x16">
+		<link rel="icon" href="src/img/logo-2.svg" type="image/gif" sizes="16x16">
 
 
 		<!-- Font -->
@@ -15,159 +14,179 @@
 		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap"
 			rel="stylesheet">
 
-		<!-- Bootstrap -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 		<!-- CSS -->
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="src/css/output.css">
 
 		<title>Covid-19</title>
 	</head>
 
-	<body>
-
-		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg navbar-light">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="img/Logo.svg" alt="">
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/index.html">Overview</a>
+	<body class="text-neutral-700 text-lg relative bg-gradient-to-t from-coral-red-50 via-coral-red-50 to-coral-red-100">
+		<!-- Header -->
+		<header id="header"
+			class="langit-container absolute w-full top-0 mx-auto py-4 transition duration-100 ease-in flex justify-between">
+			<!-- Navbar -->
+			<a class="col-span-1" href="#" aria-label="Home">
+				<img src="src/img/Logo.svg" alt="Logo" class="logo">
+			</a>
+			<nav class="navbar lg:flex lg:justify-between lg:items-center lg:gap-4">
+				<div class="hidden lg:flex lg:gap-4 lg:justify-between lg:items-center">
+					<ul class="text-teal-900 font-bold gap-4 text-base flex **:hover:text-coral-red-300">
+						<li>
+							<a href="#overview" aria-current="page">Overview</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#contagion">Contagion</a>
+						<li>
+							<a href="#contagion">Contagion</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Symptoms</a>
+						<li>
+							<a href="#symptoms">Symptomps</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#prevention">Prevention</a>
+						<li>
+							<a href="#prevention">Prevention</a>
 						</li>
 					</ul>
-					<form class="mr-5">
-						<button class="btn btn-cta-1 rounded-pill" type="button">Contact</button>
-					</form>
-				</div>
-			</div>
-		</nav>
-		<!-- End Navbar -->
 
-
-		<!-- Header -->
-		<header id="masthead">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-6 col-lg-6 col-sm-12 site-header">
-						<p class="site-tagline">COVID-19 Alert
-						</p>
-						<h1 class="site-title">Stay at Home quarantine <br>
-							To stop Corona virus</h1>
-						<p class="site-description">
-							There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People may
-							need supportive care to .
-						</p>
-						<a class="btn primary-button mt-3" href="#" role="button">Let Us Help</a>
-					</div>
-					<div class="col-md-6 col-lg-6 col-sm-12 header-img-container">
-						<img src="img/header-img.svg" class="header-img img-fluid" alt="">
-					</div>
+					<a href="#contact" role="button"
+						class="cursor-pointer rounded-full border border-coral-red-500 px-6 py-2 text-sm font-bold text-coral-red-600 transition duration-300 hover:bg-coral-red-500 hover:text-white">Contact</a>
 				</div>
-			</div>
+			</nav>
+			<!-- End Navbar -->
+
+			<!-- Navbar Mobile -->
+			<nav class="navbar-mobile">
+				<!-- Mobile menu -->
+				<div class="space-y-8 flex flex-col my-5">
+					<button type="button" id="close-button" aria-label="close mobile menu"
+						class="text-white self-end cursor-pointer">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="size-6" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+						</svg>
+					</button>
+
+					<ul class="text-coral-red-50 flex flex-col gap-4 text-base hover:text-white">
+						<li>
+							<a href="#overview">Overview</a>
+						</li>
+						<li>
+							<a href="#contagion">Contagion</a>
+						</li>
+						<li>
+							<a href="#symptoms">Symptomps</a>
+						</li>
+						<li>
+							<a href="#prevention">Prevention</a>
+						</li>
+					</ul>
+
+					<a href="#contact" type="button"
+						class="cursor-pointer text-center rounded-full border bg-coral-red-50 border-coral-red-50 px-6 py-2 text-sm font-bold text-coral-red-500 transition duration-300 hover:bg-coral-red-200 hover:border-coral-red-200">Contact</a>
+				</div>
+			</nav>
+
+			<button type="button" id="mobile-menu" aria-label="open mobile menu"
+				class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-coral-red-200 text-coral-red-600 transition duration-300 hover:bg-coral-red-500 hover:text-white lg:hidden">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+					class="size-6" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
 		</header>
 		<!-- End Header -->
 
-		<!-- Main Content -->
-		<main id="main">
 
-			<!-- About Us Section-->
-			<section class="section__about-us">
-				<div class="container">
-					<div class="row align-items-center justify-content-lg-start">
-						<div class="col-lg-6">
-							<img src="img/about-us.svg" alt="" class="img-fluid">
-						</div>
-						<div class="col-lg-6">
-							<p class="section-subtitle">
-								What is Covid-19
-							</p>
-							<h2 class="section-title">
-								Coronavirus
-							</h2>
-							<p class="section-description">
-								Corona viruses are a type of virus. There are many different kinds, and some cause
-								disease.
-								A
-								newly
-								identified type has caused a recent outbreak of respiratory illness now called
-								COVID-19.Lauren
-								Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event
-								Preparedness
-								and Response
-							</p>
-							<a class="btn primary-button mt-3" href="#" role="button">Learn More</a>
-						</div>
+
+		<!-- Main Content -->
+		<main id="main" class="pt-40">
+			<!-- Hero header -->
+			<section class="py-5 bg-[url('/src/img/header-bg.svg')] bg-no-repeat bg-right-bottom bg-contain">
+				<div class="langit-container grid gap-y-10 grid-cols-12 md:gap-x-10">
+					<div class="col-span-12 space-y-2 place-self-center text-center md:col-span-6 md:text-left">
+						<p class="text-coral-red-600 font-bold text-lg">COVID-19 Alert</p>
+						<h1
+							class="font-black text-teal-900 text-4xl leading-none break-words md:line-clamp-2 md:text-4xl lg:text-5xl md:text-balance">
+							Stay at Home Quarantine to Stop Corona Virus
+						</h1>
+
+						<p class="text-xl">There is no specific medicine to prevent or treat coronavirus disease (COVID-19). People
+							may need supportive care too.</p>
+
+						<button type="button"
+							class="bg-coral-red-500 text-white rounded-full py-2 px-6 text-base cursor-pointer transition duration-300 hover:bg-coral-red-600">Let
+							Us Help</button>
+					</div>
+					<div class="col-span-12 flex justify-end md:col-span-6">
+						<img src="src/img/header-img.svg" class="w-full h-auto lg:max-h-[500px] animate-bounce"
+							alt="Covid landing page">
 					</div>
 				</div>
 			</section>
-			<!-- End about us section-->
+
+			<!-- Overview Section-->
+			<section
+				class="langit-container bg-[url('/src/img/overview-bg.svg')] bg-no-repeat bg-right-bottom grid grid-cols-12 items-center"
+				id="overview">
+				<div class="col-span-12 md:col-span-6">
+					<img src="src/img/about-us.svg" alt="" class="lg:max-h-[500px]">
+				</div>
+				<div class="col-span-12 text-center space-y-2 md:col-span-6 md:text-left">
+					<p class="text-coral-red-500 font-bold">
+						Overview
+					</p>
+					<h2 class="font-black text-teal-900 text-3xl md:text-4xl">
+						What is Coronavirus?
+					</h2>
+					<p class="mb-4">Coronaviruses are a type of virus. There are many different kinds, and some cause disease. A
+						newly identified type has caused a recent outbreak of respiratory illness, now called COVID-19. Lauren
+						Sauer, M.S., the director of operations with the Johns Hopkins Office of Critical Event Preparedness and
+						Response, explains the situation.</p>
+					<button type="button"
+						class="bg-coral-red-500 text-white rounded-full py-2 px-6 text-base cursor-pointer transition duration-300 hover:bg-coral-red-600">Learn
+						More</button>
+				</div>
+			</section>
+			<!-- End overview section-->
 
 
-			<!-- Contagion Section -->
-			<section class="section__contagion contagion-section" id="contagion">
-				<div class="container">
-					<div class="row justify-content-center section-header">
-						<div class="col text-center">
-							<p class="section-subtitle">
-								What is Covid-19
-							</p>
-							<h2 class="section-title">
-								Contagion
-							</h2>
-							<p class="section-description">
-								Corona viruses are a type of virus. There are many different kinds, <br> and some cause
-								disease. A newly identified type
-							</p>
-						</div>
+			<!-- Contagion section -->
+			<section class="scroll-mt-10 py-16" id="contagion">
+				<div class="langit-container grid grid-cols-3 gap-8">
+					<div class="col-span-3 text-center space-y-2 mb-5">
+						<p class="text-coral-red-500 font-bold">
+							Contagion
+						</p>
+						<h2 class="font-black text-teal-900 text-3xl lg:text-4xl">
+							How the Virus Spreads
+						</h2>
+						<p class="text-balance mx-auto lg:max-w-2xl">
+							COVID-19 spreads through respiratory droplets, direct contact, and contaminated surfaces. Airborne
+							transmission in
+							enclosed spaces increases the risk of infection.
+						</p>
 					</div>
 
-					<div class="row section-content">
-						<div class="col-lg-4 text-center px-md-5 py-5">
-							<div class="card h-100 bg-body card-active p-sm-2">
-								<img src="img/contagion-1.svg" class="card-img-top p-5" alt="...">
-								<div class="card-body">
-									<h3 class="card-title section-title">Air Transmission</h3>
-									<p class="card-text section-description">Objectively evolve tactical expertise
-										before extensibleinitiatives. Efficiently simplify.</p>
-								</div>
-							</div>
+					<div
+						class="group col-span-3 cursor-pointer rounded-lg border-b-8 border-white bg-white px-4 py-8 text-center drop-shadow-xl transition-all duration-300 hover:border-coral-red-500 hover:drop-shadow-2xl lg:col-span-1">
+						<img src="src/img/contagion-1.svg" class="p-5 mx-auto" alt="Air transmission">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-black text-teal-900">Air Transmission</h3>
+							<p class="text-balance">Virus spreads through airborne particles, especially in crowded or enclosed
+								spaces.</p>
 						</div>
-						<div class="col-lg-4 text-center px-md-5 py-5">
-							<div class="card h-100 p-3 mb-5 bg-body">
-								<img src="img/contagion-2.svg" class="card-img-top p-5" alt="...">
-								<div class="card-body">
-									<h3 class="card-title section-title">Human Contacts</h3>
-									<p class="card-text section-description">Washing your hands is one of thesimplest
-										ways you can protect.</p>
-								</div>
-							</div>
+					</div>
+					<div
+						class="group col-span-3 cursor-pointer rounded-lg border-b-8 border-white bg-white px-4 py-8 text-center drop-shadow-xl transition-all duration-300 hover:border-coral-red-500 hover:drop-shadow-2xl lg:col-span-1">
+						<img src="src/img/contagion-2.svg" class="mx-auto p-5" alt="Human contacts">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-black text-teal-900">Human Contacts</h3>
+							<p class="text-balance">Direct physical contact, like handshakes or hugs, can spread the virus.</p>
 						</div>
-						<div class="col-lg-4 text-center px-md-5 py-5">
-							<div class="card h-100 p-3 mb-5 bg-body">
-								<img src="img/contagion-3.svg" class="card-img-top p-5" alt="...">
-								<div class="card-body">
-									<h3 class="card-title section-title">Containted Objects</h3>
-									<p class="card-text section-description">Use the tissue while sneezing,In this way,
-										you can protect your droplets.</p>
-								</div>
-							</div>
+					</div>
+					<div
+						class="group col-span-3 cursor-pointer rounded-lg border-b-8 border-white bg-white px-4 py-8 text-center drop-shadow-xl transition-all duration-300 hover:border-coral-red-500 hover:drop-shadow-2xl lg:col-span-1">
+						<img src="src/img/contagion-3.svg" class="mx-auto p-5" alt="Containted Objects">
+						<div class="space-y-2">
+							<h3 class="text-2xl font-black text-teal-900">Containted Objects</h3>
+							<p class="text-balance">Touching infected surfaces and then touching your face can spread the virus.</p>
 						</div>
 					</div>
 				</div>
@@ -175,241 +194,421 @@
 			<!-- End Contagion Section -->
 
 			<!-- Sympton Section -->
-			<section class="section__symptom" id="symptom">
-				<div class="container">
-					<div class="row justify-content-center section-header">
-						<div class="col text-center">
-							<p class="section-subtitle">
-								Covid-19
-							</p>
-							<h2 class="section-title">
-								Symptomps
-							</h2>
-							<p class="section-description">
-								Corona viruses are a type of virus. There are many different kinds, and some cause
-								disease. <br> A newly identified type has caused a recent outbreak of respiratory
-							</p>
-						</div>
+			<section class="scroll-mt-10 py-16" id="symptoms">
+				<div class="langit-container">
+					<div class="text-center mb-4 space-y-2">
+						<p class="text-coral-red-500 font-bold">
+							Symptoms
+						</p>
+						<h2 class="font-black text-teal-900 text-3xl md:text-4xl">
+							How to Recognize the Symptoms
+						</h2>
+						<p class="section-description">
+							Corona viruses are a type of virus. There are many different kinds, and some cause
+							disease. <br> A newly identified type has caused a recent outbreak of respiratory
+						</p>
 					</div>
 
-					<div class="row row-cols-1 row-cols-md-3  justify-content-center">
-						<div class="col-lg-8 text-center px-md-5 py-5 section__symptom--content">
-							<img src="img/sympton.svg" alt="" class="img-fluid">
-						</div>
-					</div>
+					<img src="src/img/sympton-fa.svg" alt="symptom" class="mx-auto lg:max-h-[500px]">
 				</div>
 			</section>
 			<!-- End Symptom Section -->
 
 
-			<!-- What should we do section -->
-			<section class="what-should-section" id="prevention">
-				<div class="container">
-					<div class="row justify-content-center section-header">
-						<div class="col text-center">
-							<p class="section-subtitle">
-								Prevention
-							</p>
-							<h2 class="section-title">
-								What Should We Do
-							</h2>
-							<p class="section-description">
-								Corona viruses are a type of virus. <br> There are many different kinds, and some cause
-								disease. <br>
-								A newly identified type has caused
-							</p>
+			<!-- Prevention section -->
+			<section class="scroll-mt-10 py-16" id="prevention">
+				<div class="langit-container space-y-10">
+					<div class="space-y-2 text-center">
+						<p class="text-coral-red-500 font-bold">
+							Prevention
+						</p>
+						<h2 class="font-black text-teal-900 text-3xl md:text-4xl">
+							What Should We Do
+						</h2>
+						<p class="mx-auto text-pretty lg:max-w-3xl">
+							Protect yourself and others by following essential preventive measures. Stay informed, practice good
+							hygiene, and make
+							responsible choices to reduce the risk of infection.
+						</p>
+					</div>
+
+					<!-- Number one -->
+					<div class="mx-auto flex max-w-6xl flex-col items-center justify-between md:flex-row">
+						<div class="order-last grid flex-1 grid-cols-12 gap-4 md:col-span-1 md:order-first">
+							<div class="col-span-12 place-self-center md:place-self-start lg:col-span-2 lg:mx-auto">
+								<p
+									class="font-black text-coral-red-400 text-3xl rounded-full bg-coral-red-100 size-14 flex justify-center items-center">
+									01</p>
+							</div>
+							<div class="col-span-12 text-center md:text-left md:col-span-10">
+								<h3 class="font-black text-teal-900 text-2xl col-span-5">Wear Masks</h3>
+								<p class="lg:text-balance">Masks help prevent the spread of germs, especially in crowded or indoor
+									spaces. Wearing a mask reduces the risk of
+									transmission, protecting both yourself and those around you. </p>
+							</div>
+						</div>
+						<div class="flex-1 self-center mx-auto order-first md:col-span-1 lg:order-last">
+							<img src="src/img/whatshould-1.svg" alt="Wear masks" class="mx-auto">
 						</div>
 					</div>
 
+					<!-- End number one -->
 
-					<div class="row">
-						<div class="col">
-
-							<!-- Number one -->
-							<div class="row align-items-center justify-content-center number-one mb-0">
-								<div class="col-md-1 what-should-number">
-									<img src="img/number1.svg" alt="">
-								</div>
-								<div class="col-md-5 what-should-content">
-									<h3 class="section-title">Wear Masks</h3>
-									<p class="section-description">Continually seize impactful vortals rather than
-										future-proof supply chains. Uniquely
-										exploit emerging niches via fully tested meta-services. Competently pursue
-										standards
-										compliant leadership skills vis-a-vis pandemic "outside the box" thinking.
-										Objectively </p>
-								</div>
-								<div class="col-md-3 offset-md-1 what-should-img">
-									<img src="img/whatshould-1.svg" alt="">
-								</div>
+					<!-- Number Two -->
+					<div class="mx-auto flex max-w-6xl flex-col items-center justify-between md:flex-row">
+						<div class="flex-1 self-center mx-auto md:col-span-1">
+							<img src="src/img/whatshould-2.svg" alt="Wash your hand" class="mx-auto">
+						</div>
+						<div class="grid flex-1 grid-cols-12 gap-4 md:col-span-1">
+							<div class="col-span-12 place-self-center md:place-self-start lg:col-span-2">
+								<p
+									class="font-black text-coral-red-400 text-3xl rounded-full bg-coral-red-100 size-14 flex justify-center items-center">
+									02</p>
 							</div>
-
-							<!-- End number one -->
-
-							<!-- Number Two -->
-							<div class="row align-items-center justify-content-center gy-0">
-								<div class="col-md-3 what-should-img">
-									<img src="img/whatshould-2.svg" alt="">
-								</div>
-								<div class="col-md-1 offset-md-1 what-should-number">
-									<img src="img/number2.svg" alt="">
-								</div>
-								<div class="col-md-5 what-should-content">
-									<h3 class="section-title">Wash Your Hands</h3>
-									<p class="section-description">Continually seize impactful vortals rather than
-										future-proof supply chains. Uniquely exploit emerging niches via fully tested
-										meta-services. Competently pursue standards compliant leadership skills
-										vis-a-vis
-										pandemic "outside the box" thinking. Objectively Continually seize impactful
-										vortals. </p>
-								</div>
+							<div class="col-span-12 text-center md:text-left md:col-span-10">
+								<h3 class="font-black text-teal-900 text-2xl col-span-5">Wash Your Hands</h3>
+								<p class="section-description">Regularly washing your hands with soap and water for at least 20 seconds
+									helps eliminate harmful germs and bacteria. If
+									soap and water aren't available, use hand sanitizer with at least 60% alcohol.</p>
 							</div>
-							<!-- End number two -->
-
-							<!-- Number three -->
-							<div class="row align-items-center justify-content-center number-one mb-0">
-								<div class="col-md-1 what-should-number">
-									<img src="img/number3.svg" alt="">
-								</div>
-								<div class="col-md-5 what-should-content">
-									<h3 class="section-title">Use Nose - Rag</h3>
-									<p class="section-description">Continually seize impactful vortals rather than
-										future-proof supply chains. Uniquely
-										exploit emerging niches via fully tested meta-services. Competently pursue
-										standards
-										compliant leadership skills vis-a-vis pandemic "outside the box" thinking.
-										Objectively </p>
-								</div>
-								<div class="col-md-3 offset-md-1 what-should-img">
-									<img src="img/whatshould-3.svg" alt="">
-								</div>
-							</div>
-							<!-- End Number three  -->
-
-							<!-- Number Four -->
-							<div class="row align-items-center justify-content-center gy-0">
-								<div class="col-md-3 what-should-img">
-									<img src="img/whatshould-4.svg" alt="">
-								</div>
-								<div class="col-md-1 offset-md-1 what-should-number">
-									<img src="img/number4.svg" alt="">
-								</div>
-								<div class="col-md-5 what-should-content">
-									<h3 class="section-title">Avoid Contacts</h3>
-									<p class="section-description">Continually seize impactful vortals rather than
-										future-proof supply chains. Uniquely exploit emerging niches via fully tested
-										meta-services. Competently pursue standards compliant leadership skills
-										vis-a-vis
-										pandemic "outside the box" thinking. Objectively Continually seize impactful
-										vortals. </p>
-								</div>
-							</div>
-							<!-- End number four -->
 						</div>
 					</div>
+					<!-- End number two -->
+
+					<!-- Number three -->
+					<div class="mx-auto flex max-w-6xl flex-col items-center justify-between md:flex-row">
+						<div class="order-last grid flex-1 grid-cols-12 gap-4 md:col-span-1 md:order-first">
+							<div class="col-span-12 place-self-center md:place-self-start lg:col-span-2">
+								<p
+									class="font-black text-coral-red-400 text-3xl rounded-full bg-coral-red-100 p-2 size-14 flex justify-center items-center">
+									03</p>
+							</div>
+							<div class="col-span-12 text-center md:text-left md:col-span-10">
+								<h3 class="font-black text-teal-900 text-2xl col-span-5">Use Nose - Rag</h3>
+								<p class="section-description">Always cover your nose and mouth with a clean tissue or cloth when
+									sneezing or
+									coughing. Dispose of the tissue
+									immediately, and wash your hands afterward to prevent the spread of germs.</p>
+							</div>
+						</div>
+						<div class="flex-1 self-center mx-auto order-first md:col-span-1 lg:order-last">
+							<img src="src/img/whatshould-3.svg" alt="Use nose rag" class="mx-auto">
+						</div>
+					</div>
+					<!-- End Number three  -->
+
+					<!-- Number Four -->
+					<div class="mx-auto flex max-w-6xl flex-col justify-between items-center md:flex-row">
+						<div class="flex-1 self-center mx-auto md:col-span-1">
+							<img src="src/img/whatshould-4.svg" alt="Avoid contact" class="mx-auto">
+						</div>
+						<div class="grid flex-1 grid-cols-12 gap-4 md:col-span-1">
+							<div class="col-span-12 place-self-center md:place-self-start lg:col-span-2">
+								<p
+									class="font-black text-coral-red-400 text-3xl rounded-full bg-coral-red-100 size-14 flex justify-center items-center">
+									04</p>
+							</div>
+							<div class="col-span-12 text-center md:text-left md:col-span-10">
+								<h3 class="font-black text-teal-900 text-2xl col-span-5">Avoid Contacts</h3>
+								<p class="section-description">Maintain a safe distance from others, especially in crowded places. Avoid
+									physical contact such as handshakes and hugs
+									to reduce the risk of transmitting or contracting illnesses.</p>
+							</div>
+						</div>
+					</div>
+					<!-- End number four -->
 				</div>
 			</section>
 			<!-- End what should we do section -->
 
 
 			<!-- Map Section -->
-			<section class="map-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 col-sm-12">
-							<img src="img/Map-1.svg" alt="" class="img-fluid">
-						</div>
-						<div class="col-5">
-							<table class="table align-middle">
-								<tr>
-									<th colspan="2">Live Reports</th>
-									<th><img src="img/map-ikon2.svg" alt=""></th>
-									<th><img src="img/map-ikon1.svg" alt=""></th>
-								</tr>
-								<tr>
-									<th scope="row"><img src="img/flag-1.svg" alt=""></th>
-									<td>USA</td>
-									<td>100,392</td>
-									<td><img src="img/map-ikon3.svg" alt=""></td>
-								</tr>
-								<tr>
-									<th scope="row"><img src="img/flag-2.svg" alt=""></th>
-									<td>Italy</td>
-									<td>86,498</td>
-									<td><img src="img/map-ikon3.svg" alt=""></td>
-								</tr>
+			<section class="langit-container grid grid-cols-12 gap-4">
+				<div class="col-span-12 lg:col-span-8">
+					<img src="src/img/Map-1.svg" alt="map" class="img-fluid">
+				</div>
+				<div class="col-span-12 bg-white rounded-lg drop-shadow-lg p-8 font-bold text-teal-900 lg:col-span-4">
+					<!-- Tab Buttons -->
+					<div class="grid grid-cols-3 items-center">
+						<h2 class="font-bold text-2xl text-left col-span-2">Live Reports</h2>
+						<div class="col-span-1 flex justify-evenly divide-x-2 divide-gray-300 rounded-lg bg-white drop-shadow-lg">
+							<button id="prev-button" type="button"
+								class="px-4 py-2 cursor-pointer text-coral-red-500 disabled:text-neutral-400 disabled:cursor-default"
+								aria-label="previous">
+								<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.22201 16.8869L1.87891 9.54379L9.22201 2.20068" stroke="currentColor" stroke-width="2.85"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
 
-							</table>
+							<button id="next-button" type="button"
+								class="px-4 py-2 cursor-pointer text-coral-red-500 disabled:text-neutral-400 disabled:cursor-default"
+								aria-label="next">
+								<svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2.18485 2.06794L9.52795 9.41104L2.18485 16.7541" stroke="currentColor" stroke-width="2.85"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+
+							</button>
 						</div>
+					</div>
+
+					<!-- Tab Content -->
+					<div class="tab-content">
+						<!-- Tabel 1 -->
+						<table id="tab-1" class="tab-panel active table-auto w-full border-separate border-spacing-y-10">
+							<tbody>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-1.svg" alt="USA"
+											class="size-14"> USA</th>
+									<td class="text-right">100,392</td>
+									<td class="text-right"><img src="src/img/map-icon-up.svg" alt="up" class="inline-block"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-2.svg" alt="Italy"
+											class="size-14">Italy</th>
+									<td class="text-right">86,498</td>
+									<td class="text-right"><img src="src/img/map-icon-up.svg" alt="up" class="inline-block"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-3.svg" alt="China"
+											class="size-14">China</th>
+									<td class="text-right">81,340</td>
+									<td class="text-right"><img src="src/img/map-icon-down.svg" alt="down" class="inline-block"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-4.svg" alt="Spain"
+											class="size-14">Spain</th>
+									<td class="text-right">64,059</td>
+									<td class="text-right"><img src="src/img/map-icon-up.svg" alt="up" class="inline-block"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-5.svg" alt="Germany"
+											class="size-14">Germany
+									</th>
+									<td class="text-right">50,871</td>
+									<td class="text-right"><img src="src/img/map-icon-up.svg" alt="up" class="inline-block"></td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2"><img src="src/img/flag-6.svg" alt="Iran"
+											class="size-14">Iran</th>
+									<td class="text-right">32,332</td>
+									<td class="text-right"><img src="src/img/map-icon-up.svg" alt="up" class="inline-block"></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- Tabel 2 -->
+						<table id="tab-2" class="tab-panel table-auto w-full border-separate border-spacing-y-10">
+							<tbody>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/france-flag-icon.svg" alt="France" class="size-14"> France
+									</th>
+									<td class="text-right">29,155</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/united-kingdom-flag-icon.svg" alt="UK" class="size-14"> UK
+									</th>
+									<td class="text-right">17,089</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/switzerland-flag-icon.svg" alt="Switzerland" class="size-14"> Switzerland
+									</th>
+									<td class="text-right">12,928</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/netherlands-flag-icon.svg" alt="Netherlands" class="size-14"> Netherlands
+									</th>
+									<td class="text-right">9,762</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/south-korea-flag-icon.svg" alt="South Korea" class="size-14"> South Korea
+									</th>
+									<td class="text-right">9,332</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-down.svg" alt="down" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/austria-flag-icon.svg" alt="Austria" class="size-14"> Austria
+									</th>
+									<td class="text-right">8,813</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<!-- Tabel 3 -->
+						<table id="tab-3" class="tab-panel table-auto w-full border-separate border-spacing-y-10">
+							<tbody>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/belgium-flag-icon.svg" alt="Belgium" class="size-14"> Belgium
+									</th>
+									<td class="text-right">7,284</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/canada-flag-icon.svg" alt="Canada" class="size-14"> Canada
+									</th>
+									<td class="text-right">4,682</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/portugal-flag-icon.svg" alt="Portugal" class="size-14"> Portugal
+									</th>
+									<td class="text-right">4,268</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/norway-flag-icon.svg" alt="Norway" class="size-14"> Norway
+									</th>
+									<td class="text-right">3,905</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/brazil-flag-icon.svg" alt="Brazil" class="size-14"> Brazil
+									</th>
+									<td class="text-right">3,417</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="flex items-center gap-2">
+										<img src="src/img/australia-flag-icon.svg" alt="Australia" class="size-14"> Australia
+									</th>
+									<td class="text-right">3,112</td>
+									<td class="text-right">
+										<img src="src/img/map-icon-up.svg" alt="up" class="inline-block">
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</section>
 			<!-- End Map Section -->
 
+			<!-- Contact Section -->
+			<section id="contact"
+				class="langit-container mx-auto py-24 bg-[url('/src/img/bg-footer.svg')] bg-no-repeat bg-right-bottom bg-contain">
+				<h2 class="font-black text-center text-teal-900 text-3xl md:text-4xl">Have Question in mind?<br>
+					Let us help you</h2>
+				<div class="mx-auto mt-10 py-3 shadow-xl bg-white rounded-full flex justify-between px-4 max-w-lg">
+					<input type="email" class="flex-1 rounded-full text-base text-teal-900 outline-0"
+						placeholder="Enter your email">
+					<span class="input-group-btn align-content-center">
+						<button
+							class="bg-coral-red-500 text-white rounded-full text-base py-2 px-8 cursor-pointer hover:bg-coral-red-600"
+							type="submit">Send</button>
+					</span>
+				</div>
+			</section>
 
 		</main>
 		<!-- End Main Content -->
 
 		<!-- Footer -->
 		<footer>
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-6 col-sm-12">
-						<h2 class="section-title text-center">Have Question in mind?<br>
-							Let us help you</h2>
-						<div class="input-group contact-form py-2">
-							<input type="email" class="form-control" placeholder="Enter your email">
-							<span class="input-group-btn align-content-center">
-								<button class="btn btn-cta-4" type="submit">Send</button>
-							</span>
-						</div>
-					</div>
-				</div>
-
-
+			<div class="langit-container pb-5">
 				<!-- Footer Navigation -->
-				<nav class="navbar navbar-expand navbar-light mx-auto">
-					<a class="navbar-brand" href="#">
-						<img src="img/Logo.svg" alt="">
+				<nav class="grid grid-cols-12 items-center justify-between space-y-4 pt-4" aria-label="Footer navigation">
+					<a class="col-span-12 justify-self-center md:col-span-3 md:justify-self-start" href="#" aria-label="home">
+						<img src="src/img/Logo.svg" alt="Logo">
 					</a>
-					<div class="justify-content-lg-end">
-						<ul class="navbar-nav">
+					<div class="col-span-12 md:col-span-6">
+						<ul class="flex gap-y-2 gap-x-2 text-base font-bold flex-wrap text-teal-900 justify-center">
 							<li class="nav-item">
-								<a class="nav-link" href="/index.html">Overview</a>
+								<a class="nav-link" href="#overview">Overview</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Symptoms</a>
+								<a class="nav-link" href="#symptoms">Symptoms</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Prevention</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Treatment</a>
+								<a class="nav-link" href="#prevention">Prevention</a>
 							</li>
 						</ul>
+					</div>
 
+					<div class="col-span-12 flex items-center gap-2 justify-self-center  md:justify-self-end md:col-span-3">
+						<a href="https://github.com/eLAmaravati" target="_blank" rel="noopener noreferrer" aria-label="Github"
+							class="size-6 text-teal-900 hover:text-teal-950">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path fill="currentColor"
+									d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+							</svg>
+						</a>
+
+						<a href="https://www.youtube.com/@LangitAmaravati" target="_blank" rel="noopener noreferrer"
+							aria-label="Youtube" class="size-6 text-teal-900 hover:text-teal-950">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path fill="currentColor"
+									d="M6.443 4.381C7.84 4.25 9.637 4.25 11.96 4.25h.082c2.322 0 4.119 0 5.516.131c1.407.133 2.517.406 3.409 1.03c.928.65 1.377 1.511 1.587 2.607c.197 1.024.197 2.321.197 3.907v.15c0 1.586 0 2.883-.197 3.907c-.21 1.096-.659 1.957-1.587 2.607c-.892.624-2.002.897-3.41 1.03c-1.396.131-3.193.131-5.515.131h-.082c-2.322 0-4.119 0-5.516-.131c-1.407-.133-2.517-.406-3.409-1.03c-.928-.65-1.377-1.511-1.587-2.607c-.197-1.024-.197-2.321-.197-3.907v-.15c0-1.586 0-2.883.197-3.907c.21-1.096.659-1.957 1.587-2.607c.892-.624 2.002-.897 3.41-1.03m5.115 4.564a1.166 1.166 0 0 0-1.608.313c-.13.191-.2.418-.2.65v4.184a1.16 1.16 0 0 0 1.8.968l3.175-2.074a1.155 1.155 0 0 0 .008-1.931z" />
+							</svg>
+						</a>
+
+						<a href="https://codepen.io/LangitAmaravati/" target="_blank" rel="noopener noreferrer" aria-label="Codepen"
+							class="size-6 text-teal-900 hover:text-teal-950">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<path fill="currentColor"
+									d="m8.21 12l-1.33.89v-1.78zm3.26-2.18V7.34l-4.16 2.78l1.85 1.24zm5.23.3l-4.17-2.78v2.48l2.31 1.54zm-9.39 3.76l4.16 2.78v-2.48l-2.31-1.54zm5.22.3v2.48l4.17-2.78l-1.86-1.24zM12 10.74L10.12 12L12 13.26L13.88 12zM22 12c0 5.5-4.5 10-10 10S2 17.5 2 12S6.5 2 12 2s10 4.5 10 10m-3.82-1.88v-.07l-.01-.05l-.01-.05c-.01-.01-.01-.02-.02-.04l-.01-.02l-.02-.04l-.01-.02l-.02-.03l-.02-.03l-.03-.03l-.03-.02V9.7l-.04-.02l-.01-.01l-5.65-3.76a.53.53 0 0 0-.59 0L6.05 9.67v.01L6 9.7v.02l-.03.02l-.03.03l-.01.03l-.03.03l-.01.02l-.02.04l-.01.02l-.02.04V10h-.01l-.01.05v3.9l.01.05h.01v.05c.01.01.01.02.02.04l.01.02l.02.04l.01.02l.02.03l.02.03l.03.03l.03.02v.02l.04.02l.01.01l5.66 3.77c.08.06.19.08.29.08s.21-.03.3-.08l5.65-3.77l.01-.01l.04-.02v-.02l.03-.02l.03-.03l.02-.03l.02-.03l.01-.02l.02-.04l.01-.02l.02-.04V14h.01l.01-.05zm-1.06 2.77v-1.78l-1.33.89z" />
+							</svg>
+						</a>
 					</div>
 				</nav>
 				<!-- End Footer Navigation -->
 
+				<hr class="border-coral-red-200 mt-5 mb-10">
 				<!-- Copyright -->
-				<div class="row">
-					<div class="col">
-						<p class="copyright-text text-center">2021 @ All rights reserved | Coded by <a
-								href="https://www.langitamaravati.com">Langit Amaravati</a> | Design by Pixelspark</p>
-					</div>
-				</div>
+				<small class="text-center text-sm text-teal-950 mx-auto block">2022 @ All rights reserved | Coded by <a
+						href="https://langitamaravati.vercel.app" target="_blank" rel="noopener noreferrer">Langit Amaravati</a>
+					| Design by Pixelspark</small>
 				<!-- End copyright -->
 
 			</div>
 		</footer>
 		<!-- End Footer -->
 
+		<button type="button" id="scroll-to-top" aria-label="Scroll to top"
+			class="fixed hidden right-10 bottom-5 size-12 cursor-pointer items-center justify-center rounded-full bg-coral-red-200 opacity-70 transition-all duration-300 hover:opacity-100">
+			<img src="src/img/map-icon-up.svg" alt="">
+		</button>
 
 		<!-- Script -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-		</script>
+		<script src="src/js/script.js" defer></script>
 	</body>
 
 </html>

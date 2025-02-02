@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  overflow-x: hidden;
+}
+
+@theme {
+  --color-coral-red-50: #fff1f1;
+  --color-coral-red-100: #ffdfe0;
+  --color-coral-red-200: #ffc5c6;
+  --color-coral-red-300: #ff9d9f;
+  --color-coral-red-400: #ff6468;
+  --color-coral-red-500: #ff383d;
+  --color-coral-red-600: #ed151a;
+  --color-coral-red-700: #c80d12;
+  --color-coral-red-800: #a50f13;
+  --color-coral-red-900: #881417;
+  --color-coral-red-950: #4b0406;
+
+  --animate-bounce: bounce 3s ease-in-out infinite;
+
+  @keyframes bounce {
+  0%, 100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  }
+}
+
+@layer components {
+  .langit-container {
+     padding-right: clamp(20px, 5vw, 64px);
+     padding-left: clamp(20px, 5vw, 64px);
+     margin-left: auto;
+     margin-right: auto;
+  }
+
+  .header-fixed {
+    @apply fixed top-0 left-0 w-full z-50 bg-red-50 shadow-sm;
+
+    .logo {
+      @apply h-10;
+    }
+  }
+
+  .navbar-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 50;
+    width: 50vw;
+    background-color: var(--color-coral-red-500);
+    padding: 40px;
+    overflow: hidden;
+    transform: translateX(-100%);
+  }
+
+  .navbar-mobile.navbar-mobile--show {
+  transform: translateX(0);
+  width: 50vw;
+  }
+
+  .tab-panel {
+    @apply hidden;
+
+    &.active {
+      @apply table;
+    }
+  }
+}

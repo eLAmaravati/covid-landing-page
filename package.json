@@ -1,0 +1,27 @@
+{
+  "name": "covid-landing-page",
+  "version": "1.0.0",
+  "description": "Latihan slicing",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eLAmaravati/covid-landing-page.git"
+  },
+  "keywords": [],
+  "author": "Langit Amaravati",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/eLAmaravati/covid-landing-page/issues"
+  },
+  "homepage": "https://github.com/eLAmaravati/covid-landing-page#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
